@@ -1,0 +1,4 @@
+echo hello
+./memoryTest
+./timeTest
+echo bye

@@ -1,0 +1,124 @@
+Real ----- User ----- System 
+Creating an array
+0.000000   0.000000   0.000000   
+Real ----- User ----- System 
+Creating an array
+0.000033   0.000030   0.000002   
+change_obo 
+0.000009   0.000008   0.000000   
+change_all 
+0.000085   0.000083   0.000003   
+Real ----- User ----- System 
+Creating an array
+0.000042   0.000039   0.000001   
+change_all 
+0.000011   0.000012   0.000000   
+remove 
+0.000000   0.000000   0.000000   
+Real ----- User ----- System 
+Creating an array
+0.000036   0.000035   0.000000   
+find_nearest 
+0.000010   0.000010   0.000000   
+change_obo 
+0.000008   0.000008   0.000000   
+Real ----- User ----- System 
+Creating an array
+0.000068   0.000065   0.000003   
+change_all 
+0.000038   0.000036   0.000000   
+remove 
+0.000000   0.000000   0.000000   
+Real ----- User ----- System 
+Creating an array
+0.000000   0.000000   0.000000   
+Real ----- User ----- System 
+Creating an array
+0.000033   0.000031   0.000001   
+change_obo 
+0.000008   0.000009   0.000000   
+change_all 
+0.000010   0.000008   0.000000   
+Real ----- User ----- System 
+Creating an array
+0.000041   0.000038   0.000002   
+change_all 
+0.000011   0.000011   0.000000   
+remove 
+0.000000   0.000000   0.000000   
+Real ----- User ----- System 
+Creating an array
+0.000037   0.000035   0.000001   
+find_nearest 
+0.000010   0.000010   0.000000   
+change_obo 
+0.000007   0.000008   0.000000   
+Real ----- User ----- System 
+Creating an array
+0.000066   0.000063   0.000003   
+change_all 
+0.000037   0.000036   0.000001   
+remove 
+0.000000   0.000000   0.000000   
+Real ----- User ----- System 
+Creating an array
+0.000000   0.000000   0.000000   
+Real ----- User ----- System 
+Creating an array
+0.000033   0.000030   0.000001   
+change_obo 
+0.000008   0.000009   0.000000   
+change_all 
+0.000089   0.000084   0.000005   
+Real ----- User ----- System 
+Creating an array
+0.000041   0.000039   0.000001   
+change_all 
+0.000011   0.000011   0.000000   
+remove 
+0.000000   0.000000   0.000000   
+Real ----- User ----- System 
+Creating an array
+0.000037   0.000035   0.000001   
+find_nearest 
+0.000010   0.000010   0.000000   
+change_obo 
+0.000007   0.000008   0.000000   
+Real ----- User ----- System 
+Creating an array
+0.000066   0.000063   0.000003   
+change_all 
+0.000038   0.000037   0.000000   
+remove 
+0.000000   0.000000   0.000000   
+Real ----- User ----- System 
+Creating an array
+0.000000   0.000000   0.000000   
+Real ----- User ----- System 
+Creating an array
+0.000032   0.000031   0.000001   
+change_obo 
+0.000009   0.000008   0.000000   
+change_all 
+0.000009   0.000009   0.000000   
+Real ----- User ----- System 
+Creating an array
+0.000041   0.000039   0.000001   
+change_all 
+0.000011   0.000010   0.000001   
+remove 
+0.000000   0.000000   0.000000   
+Real ----- User ----- System 
+Creating an array
+0.000037   0.000035   0.000001   
+find_nearest 
+0.000010   0.000010   0.000000   
+change_obo 
+0.000007   0.000007   0.000000   
+Real ----- User ----- System 
+Creating an array
+0.000066   0.000064   0.000002   
+change_all 
+0.000038   0.000037   0.000000   
+remove 
+0.000000   0.000000   0.000000   

@@ -1,0 +1,5 @@
+ls -l
+touch plik.txt
+cat Makefile
+mkdir katalog
+echo 5 task

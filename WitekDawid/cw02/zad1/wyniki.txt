@@ -1,0 +1,131 @@
+Funkcja: copy, typ: lib, ilosc rekordow: 1000, dlugosc rekordu: 4
+Czas uzytkownika: 0.0000000000, czas systemowy: 0.0000000000
+
+Funkcja: copy, typ: sys, ilosc rekordow: 1000, dlugosc rekordu: 4
+Czas uzytkownika: 0.0000000000, czas systemowy: 0.0000000000
+
+
+Funkcja: sort, typ: lib, ilosc rekordow: 1000, dlugosc rekordu: 4
+Czas uzytkownika: 0.0900000000, czas systemowy: 0.2900000000
+
+Funkcja: sort, typ: sys, ilosc rekordow: 1000, dlugosc rekordu: 4
+Czas uzytkownika: 0.1200000000, czas systemowy: 0.3400000000
+
+
+
+
+Funkcja: copy, typ: lib, ilosc rekordow: 10000, dlugosc rekordu: 4
+Czas uzytkownika: 0.0000000000, czas systemowy: 0.0000000000
+
+Funkcja: copy, typ: sys, ilosc rekordow: 10000, dlugosc rekordu: 4
+Czas uzytkownika: 0.0000000000, czas systemowy: 0.0300000000
+
+
+Funkcja: sort, typ: lib, ilosc rekordow: 10000, dlugosc rekordu: 4
+Czas uzytkownika: 5.8500000000, czas systemowy: 9.9500000000
+
+Funkcja: sort, typ: sys, ilosc rekordow: 10000, dlugosc rekordu: 4
+Czas uzytkownika: 10.1900000000, czas systemowy: 29.4500000000
+
+
+
+
+Funkcja: copy, typ: lib, ilosc rekordow: 1000, dlugosc rekordu: 512
+Czas uzytkownika: 0.0000000000, czas systemowy: 0.0000000000
+
+Funkcja: copy, typ: sys, ilosc rekordow: 1000, dlugosc rekordu: 512
+Czas uzytkownika: 0.0000000000, czas systemowy: 0.0000000000
+
+
+Funkcja: sort, typ: lib, ilosc rekordow: 1000, dlugosc rekordu: 512
+Czas uzytkownika: 0.1600000000, czas systemowy: 0.3600000000
+
+Funkcja: sort, typ: sys, ilosc rekordow: 1000, dlugosc rekordu: 512
+Czas uzytkownika: 0.1000000000, czas systemowy: 0.4800000000
+
+
+
+
+Funkcja: copy, typ: lib, ilosc rekordow: 10000, dlugosc rekordu: 512
+Czas uzytkownika: 0.0000000000, czas systemowy: 0.0000000000
+
+Funkcja: copy, typ: sys, ilosc rekordow: 10000, dlugosc rekordu: 512
+Czas uzytkownika: 0.0000000000, czas systemowy: 0.0300000000
+
+
+Funkcja: sort, typ: lib, ilosc rekordow: 10000, dlugosc rekordu: 512
+Czas uzytkownika: 8.1800000000, czas systemowy: 14.5000000000
+
+Funkcja: sort, typ: sys, ilosc rekordow: 10000, dlugosc rekordu: 512
+Czas uzytkownika: 9.0500000000, czas systemowy: 27.3800000000
+
+
+
+
+Funkcja: copy, typ: lib, ilosc rekordow: 1000, dlugosc rekordu: 4096
+Czas uzytkownika: 0.0000000000, czas systemowy: 0.0100000000
+
+Funkcja: copy, typ: sys, ilosc rekordow: 1000, dlugosc rekordu: 4096
+Czas uzytkownika: 0.0000000000, czas systemowy: 0.0100000000
+
+
+Funkcja: sort, typ: lib, ilosc rekordow: 1000, dlugosc rekordu: 4096
+Czas uzytkownika: 0.1800000000, czas systemowy: 0.6500000000
+
+Funkcja: sort, typ: sys, ilosc rekordow: 1000, dlugosc rekordu: 4096
+Czas uzytkownika: 0.1200000000, czas systemowy: 0.6800000000
+
+
+
+
+Funkcja: copy, typ: lib, ilosc rekordow: 10000, dlugosc rekordu: 4096
+Czas uzytkownika: 0.0000000000, czas systemowy: 0.0500000000
+
+Funkcja: copy, typ: sys, ilosc rekordow: 10000, dlugosc rekordu: 4096
+Czas uzytkownika: 0.0000000000, czas systemowy: 0.0700000000
+
+
+Funkcja: sort, typ: lib, ilosc rekordow: 10000, dlugosc rekordu: 4096
+Czas uzytkownika: 18.5800000000, czas systemowy: 54.3900000000
+
+Funkcja: sort, typ: sys, ilosc rekordow: 10000, dlugosc rekordu: 4096
+Czas uzytkownika: 11.4300000000, czas systemowy: 58.3700000000
+
+
+
+
+Funkcja: copy, typ: lib, ilosc rekordow: 1000, dlugosc rekordu: 8192
+Czas uzytkownika: 0.0000000000, czas systemowy: 0.0000000000
+
+Funkcja: copy, typ: sys, ilosc rekordow: 1000, dlugosc rekordu: 8192
+Czas uzytkownika: 0.0000000000, czas systemowy: 0.0200000000
+
+
+Funkcja: sort, typ: lib, ilosc rekordow: 1000, dlugosc rekordu: 8192
+Czas uzytkownika: 0.3000000000, czas systemowy: 1.1800000000
+
+Funkcja: sort, typ: sys, ilosc rekordow: 1000, dlugosc rekordu: 8192
+Czas uzytkownika: 0.1500000000, czas systemowy: 0.6300000000
+
+
+
+
+Funkcja: copy, typ: lib, ilosc rekordow: 10000, dlugosc rekordu: 8192
+Czas uzytkownika: 0.0000000000, czas systemowy: 0.0900000000
+
+Funkcja: copy, typ: sys, ilosc rekordow: 10000, dlugosc rekordu: 8192
+Czas uzytkownika: 0.0100000000, czas systemowy: 0.1300000000
+
+
+Funkcja: sort, typ: lib, ilosc rekordow: 10000, dlugosc rekordu: 8192
+Czas uzytkownika: 28.3100000000, czas systemowy: 109.1600000000
+
+Funkcja: sort, typ: sys, ilosc rekordow: 10000, dlugosc rekordu: 8192
+Czas uzytkownika: 12.4300000000, czas systemowy: 93.6600000000
+
+
+
+WNIOSKI:
+Dla małych długosci(4, 512) rekordu sortowanie za pomoca funkcji bibliotecznych jest szybsze. Jedynym wyjatkiem od tego jest czas uzytkownika, ktory dla malej liczby rekordow jest wiekszy dla funkcji bibliotecznych.
+Dla dlugosci rekordu rownej 4096 czas uzytkownika jest mniejszy w przypadku uzycia funkcji systemowych. Czas systemowy dalej, ale juz tylko nieznacznie, jest mniejszy dla funkcji bibliotecznych.
+Dla najwiekszej testowanej dlugosci rekordu rownej 8192 czas uzytkownika i czas systemowy jest mniejszy w przypadku uzycia funkcji systemowych.
