@@ -7,49 +7,43 @@
 #include <sys/types.h>
 #include <unistd.h>
 #include <fcntl.h>
-#include <sys/wait.h>
 
 #define max_arguments 32
 #define max_size_of_task 128
 #define max_commands 64
 
-
 void parse_line(char** arguments){
 	int number_of_commands = 1; //bo jak sa 2 || to mamy 3 komendy
 	int pipes[2][2];
-	int i=0,j,k=0;
-	int length = 0;
+	int i=0,j,k=0,tmp;
+	char* commands[max_arguments];
 
-	while(arguments[i] != NULL){
-		i++;
-		length++;
-	}
-	//printf("%d\n", length);
-
-	for(i = 0; i<length; i++){
+	while(arguments[i] != NULL){		
 		if(strcmp(arguments[i], "|") == 0){
 			number_of_commands++;
 		}
+		i++;
 	}
-	//printf("%d\n", number_of_commands);
 
-	char* commands[number_of_commands][max_arguments];
 	for(i = 0; i<number_of_commands; i++){
-		j = 0;
-		while(arguments[k]!=NULL){
+		j=0;
+		tmp = 0;
+
+		while (commands[tmp] != NULL){
+			commands[tmp] = NULL;
+			tmp++;
+		}
+
+		while(arguments[k] != NULL){
 			if(strcmp(arguments[k], "|") == 0){
 				k++;
 				break;
 			}
-			commands[i][j] = arguments[k];
-			//printf("%s, %d, %d, %d\n", commands[i][j], i, j, k);
+			commands[j] = arguments[k];
 			j++;
 			k++;
 		}
-	}
 
-	for(i = 0; i<number_of_commands; i++){
-		//printf("%d\n", i);
 		if(i > 0){
 			close(pipes[i%2][0]);
 			close(pipes[i%2][1]);
@@ -62,38 +56,24 @@ void parse_line(char** arguments){
 
 		pid_t cpid = fork();
 		if (cpid == 0){
-			//printf("Kupa %d\n", i);
-			if(i != 0){
-				close(pipes[(i+1)%2][1]);
-				if(dup2(pipes[(i+1)%2][0], STDIN_FILENO) == -1){
-					printf("Problem with dup2a.\n");
-					exit(1);
-				}
-			}
-
 			if(i != number_of_commands-1){
 				close(pipes[(i%2)][0]);
 				if(dup2(pipes[i%2][1], STDOUT_FILENO) == -1){
-					printf("Problem with dup2b.\n");
+					printf("Problem with duplicating STDOUT_FILENO.\n");
 					exit(1);
 				}
 			}
-			//printf("%d, %d\n", getpid(), getppid());
-			//printf("%s\n", commands[i][0]);
-			execvp(commands[i][0], commands[i]);
-			exit(0);
-		}
 
-		int status;
-		wait(&status);
-		if(status != 0){
-			printf("Error while running task %s.\n", commands[i][0]);
-			printf("Raw wait return: %d.\n", status);
-			if (WIFSIGNALED(status)){
-				printf("Task was terminated by signal: %d.\n", WTERMSIG(status));
-				//11 - SIGSEGV Core Invalid memory reference
-				//24 - SIGSTP Stop Stop typed at terminal
+			if(i != 0){
+				close(pipes[(i+1)%2][1]);
+				if(dup2(pipes[(i+1)%2][0], STDIN_FILENO) == -1){
+					printf("Problem with duplicating STDIN_FILENO.\n");
+					exit(1);
+				}
 			}
+
+			execvp(commands[0], commands);
+			exit(0);
 		}
 	}
 	close(pipes[i%2][0]);
@@ -123,13 +103,13 @@ int main(int argc, char **argv){
 
 		while((arguments[current_argument] = strtok(current_argument == 0 ? task : NULL, " \n\t")) != NULL){
 			current_argument++;
-			//printf("%s\n", arguments[current_argument-1]);
-			if(current_argument > max_arguments){
-				fprintf(stderr, "Too much arguments for task %s.\n", arguments[0]);
+			if(current_argument > (max_arguments+1) * max_commands){
+				printf("Too much arguments in line.\n");
+				exit(1);
 			}
 		}
 
-		pid_t pid = fork();
+		pid_t pid = vfork();
 		if (pid == 0){
 			parse_line(arguments);
 			exit(0);

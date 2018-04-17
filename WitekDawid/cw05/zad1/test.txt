@@ -1,2 +1,3 @@
 ls -l | grep main | head -n 1
-ls -l
+ps aux
+echo 5
