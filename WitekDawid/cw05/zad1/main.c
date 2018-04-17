@@ -49,7 +49,8 @@ void parse_line(char** arguments){
 	}
 
 	for(i = 0; i<number_of_commands; i++){
-		if(i > 1){
+		//printf("%d\n", i);
+		if(i > 0){
 			close(pipes[i%2][0]);
 			close(pipes[i%2][1]);
 		}
@@ -61,30 +62,32 @@ void parse_line(char** arguments){
 
 		pid_t cpid = fork();
 		if (cpid == 0){
+			//printf("Kupa %d\n", i);
 			if(i != 0){
-				close(pipes[(i%2)+1][1]);
-				if(dup2(pipes[i%2][1], STDOUT_FILENO) == -1){
-					printf("Problem with dup2.\n");
+				close(pipes[(i+1)%2][1]);
+				if(dup2(pipes[(i+1)%2][0], STDIN_FILENO) == -1){
+					printf("Problem with dup2a.\n");
 					exit(1);
 				}
 			}
 
 			if(i != number_of_commands-1){
-				close(pipes[(i%2)+1][0]);
-				if(dup2(pipes[i%2][0], STDIN_FILENO) == -1){
-					printf("Problem with dup2.\n");
+				close(pipes[(i%2)][0]);
+				if(dup2(pipes[i%2][1], STDOUT_FILENO) == -1){
+					printf("Problem with dup2b.\n");
 					exit(1);
 				}
 			}
-			printf("%s\n", commands[i][0]);
-			execvp(commands[i][0], commands[i][]);
+			//printf("%d, %d\n", getpid(), getppid());
+			//printf("%s\n", commands[i][0]);
+			execvp(commands[i][0], commands[i]);
 			exit(0);
 		}
 
 		int status;
 		wait(&status);
 		if(status != 0){
-			printf("Error while running task %s.\n", arguments[0]);
+			printf("Error while running task %s.\n", commands[i][0]);
 			printf("Raw wait return: %d.\n", status);
 			if (WIFSIGNALED(status)){
 				printf("Task was terminated by signal: %d.\n", WTERMSIG(status));
@@ -134,7 +137,7 @@ int main(int argc, char **argv){
 		int status;
 		wait(&status);
 		if(status != 0){
-			printf("Error while running task %s.\n", arguments[0]);
+			printf("Error while executing line.\n");
 			printf("Raw wait return: %d.\n", status);
 			if (WIFSIGNALED(status)){
 				printf("Task was terminated by signal: %d.\n", WTERMSIG(status));
