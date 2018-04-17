@@ -20,6 +20,18 @@ int main(int argc, char** argv){
 	}
 	if(master == 0){
 		execlp("./master", "./master", argv[1], (char*) NULL);
+		int status;
+		wait(&status);
+		if(status != 0){
+			printf("Error while running slave.\n");
+			printf("Raw wait return: %d.\n", status);
+			if (WIFSIGNALED(status)){
+				printf("Slave was terminated by signal: %d.\n", WTERMSIG(status));
+				//11 - SIGSEGV Core Invalid memory reference
+				//24 - SIGSTP Stop Stop typed at terminal
+			}
+		}
+
 	}
 
 	sleep(1);
@@ -32,6 +44,17 @@ int main(int argc, char** argv){
 		}
 		if(slave == 0){
 			execlp("./slave", "./slave", argv[1], argv[2], (char*) NULL);
+			int status;
+			wait(&status);
+			if(status != 0){
+				printf("Error while running slave.\n");
+				printf("Raw wait return: %d.\n", status);
+				if (WIFSIGNALED(status)){
+					printf("Slave was terminated by signal: %d.\n", WTERMSIG(status));
+					//11 - SIGSEGV Core Invalid memory reference
+					//24 - SIGSTP Stop Stop typed at terminal
+				}
+			}
 		}
 	}
 	return 0;
