@@ -21,6 +21,7 @@ int main(int argc, char** argv){
 	FILE *fifo = fopen(argv[1], "r");
 	if (fifo == NULL){
 		printf("Master:Problem with opening fifo.\n");
+		exit(1);
 	}
 
 	char reader[buffer_size];

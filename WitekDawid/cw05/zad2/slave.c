@@ -20,6 +20,7 @@ int main(int argc, char** argv){
 	int fifo = open(argv[1], O_WRONLY);
 	if (fifo == -1){
 		printf("Slave:Problem with opening fifo.\n");
+		exit(1);
 	}
 
 	printf("Slave:My pid is %d\n", getpid());
