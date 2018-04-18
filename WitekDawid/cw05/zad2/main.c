@@ -23,10 +23,10 @@ int main(int argc, char** argv){
 		int status;
 		wait(&status);
 		if(status != 0){
-			printf("Error while running slave.\n");
+			printf("Error while running master.\n");
 			printf("Raw wait return: %d.\n", status);
 			if (WIFSIGNALED(status)){
-				printf("Slave was terminated by signal: %d.\n", WTERMSIG(status));
+				printf("Master was terminated by signal: %d.\n", WTERMSIG(status));
 				//11 - SIGSEGV Core Invalid memory reference
 				//24 - SIGSTP Stop Stop typed at terminal
 			}
