@@ -1,3 +1,3 @@
-ls -l | grep main | head -n 1
+ls -l | awffafa| grep main | head -n 1
 ps aux
 echo 5
