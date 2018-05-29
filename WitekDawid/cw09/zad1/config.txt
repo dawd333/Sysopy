@@ -1,0 +1,1 @@
+10 15 200 pantadeusz.txt 40 LESS SIMPLE 0

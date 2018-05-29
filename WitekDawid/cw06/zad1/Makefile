@@ -1,13 +1,12 @@
-MAIN = main.o
-MAINEXE = main
+CC = gcc
+CFLAGS = -g -O2 -std=gnu99 -static -Wall -Wextra -Isrc -rdynamic -fomit-frame-pointer
 
-all: $(MAIN) $(MAINEXE)
+all: $(patsubst %.c, %.out, $(wildcard *.c))
 
-clean:
-	rm -r $(MAIN) $(MAINEXE)
+%.out: %.c Makefile
+	$(CC) $(CFLAGS) $< -o $(@:.out=)
 
-$(MAIN): main.c
-	gcc -c main.c
+clean: $(patsubst %.c, %.clean, $(wildcard *.c))
 
-$(MAINEXE): $(MAIN)
-	gcc $(MAIN) -o $(MAINEXE)
+%.clean:
+	rm -f $(@:.clean=)
