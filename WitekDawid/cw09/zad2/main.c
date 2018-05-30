@@ -16,6 +16,7 @@ sem_t free_slots_sem;
 sem_t taken_slots_sem;
 
 void exit_handler(){
+  printf("Clearing before exit.\n");
   if (buffer) free(buffer);
   if (source_file) fclose(source_file);
   sem_destroy(&buffer_sem);

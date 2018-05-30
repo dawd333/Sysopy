@@ -15,6 +15,7 @@ pthread_cond_t empty_cond = PTHREAD_COND_INITIALIZER;
 pthread_cond_t full_cond = PTHREAD_COND_INITIALIZER;
 
 void exit_handler(){
+  printf("Clearing before exit.\n");
   if (buffer) free(buffer);
   if (source_file) fclose(source_file);
   pthread_mutex_destroy(&mutex);
